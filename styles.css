@@ -1,0 +1,368 @@
+/* Стилі для контейнера пошуку */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Вирівнюємо пошук праворуч */
+    padding: 0 20px; /* Відступи для кращого вигляду */
+}
+
+/* Стилі для поля введення */
+.search-input {
+    width: 200px; /* Ширина поля */
+    height: 30px; /* Висота поля */
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Закруглення лівої сторони */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff; /* Колір рамки при фокусі */
+}
+
+/* Стилі для кнопки пошуку */
+.search-button {
+    height: 30px; /* Висота кнопки */
+    padding: 0 15px;
+    font-size: 14px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Закруглення правої сторони */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Колір кнопки при наведенні */
+}
+
+/* Навігація (каталог) */
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Відступ від пошукової строки */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+/* Глобальні стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #191a5a, #2a5b98);
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрування всього контенту по горизонталі */
+}
+/* Контейнер сайта */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрування контенту в контейнері */
+}
+
+/* Шапка сайта */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%; /* Шапка на всю ширину */
+}
+
+/* Логотип */
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap; /* Назва в один рядок */
+}
+
+/* Пошукова строка */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-button {
+    background: #ffcc00;
+    color: #1e3c72;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#search-button:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+
+/* Навігація */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Секції */
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Ширина секцій */
+    max-width: 800px; /* Максимальна ширина секцій */
+    text-align: center; /* Центрування тексту */
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрування заголовка */
+    gap: 10px;
+}
+
+/* Секція допомоги ЗСУ з напівпрозорим фоном */
+.donate-section {
+    position: relative;
+}
+
+.donate-section::before {
+    content: "";
+    background: url('https://mil.in.ua/wp-content/uploads/2022/02/ZSU.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; /* Напівпрозорість */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Секція пошуку з напівпрозорим фоном */
+.search-section {
+    position: relative;
+    overflow: hidden; /* Щоб фон не виходив за межі секції */
+}
+
+.search-section::before {
+    content: "";
+    background: url('https://abal.com.ua/wp-content/uploads/2022/10/poshuk.jpg') no-repeat center center;
+    background-size: cover; /* Розтягуємо картинку на весь фон */
+    opacity: 0.3; /* Напівпрозорість */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Щоб картинка була під текстом */
+}
+
+/* Секція свята з напівпрозорим фоном */
+.holidays-section {
+    position: relative;
+}
+
+.holidays-section::before {
+    content: "";
+    background: url('https://i.pinimg.com/564x/74/58/36/745836d252d79530d261b1667229c7b5.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; /* Напівпрозорість */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Кнопка "Переглянути" */
+.view-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #1e3c72;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-button:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    width: 100%; /* Футер на всю ширину */
+}
+
+
+/* Загальні стилі для секцій */
+.section {
+    position: relative;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Фонові зображення для секцій */
+.holidays-section::before,
+.radio-section::before,
+.telemarathon-section::before,
+.weather-section::before,
+.sport-section::before,
+.currency-section::before {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Свята */
+.holidays-section::before {
+    background-image: url('https://i.pinimg.com/564x/74/58/36/745836d252d79530d261b1667229c7b5.jpg');
+}
+
+/* Радіо */
+.radio-section::before {
+    background-image: url('https://www.fttc.com.ua/wp-content/uploads/2016/06/Radio.jpeg');
+}
+
+/* Телемарафон */
+.telemarathon-section::before {
+    background-image: url('https://i.ytimg.com/vi/3JqGXX40qD4/sddefault.jpg?v=64b777e3');
+}
+
+/* Погода */
+.weather-section::before {
+    background-image: url('https://img.pravda.com/images/doc/1/3/1334ed6-doshch11300_690x387.jpg');
+}
+
+/* Спорт */
+.sport-section::before {
+    background-image: url('https://cdn.sortiraparis.com/images/80/94880/1127858-bonnes-resolutions-les-conseils-pour-reprendre-le-sport-en-2025-et-s-y-tenir.jpg');
+}
+
+/* Курси валют */
+.currency-section::before {
+    background-image: url('https://st2.depositphotos.com/4215343/6842/i/600/depositphotos_68424755-stock-photo-currency-exchange-board.jpg');
+}
+
+/* Інші стилі */
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.view-button:hover {
+    background-color: #0056b3;
+}
+.news-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.news-section::before {
+    content: "";
+    background: url('https://sfera-tv.com.ua/img/1000/20211210_5523.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+/* Стилі для контейнера пошуку */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Вирівнюємо пошук праворуч */
+    padding: 0 20px; /* Відступи для кращого вигляду */
+}
+/* Стилі для поля введення */
+.search-input {
+    width: 300px; /* Ширина поля */
+    height: 10px; /* Висота поля */
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff; /* Колір рамки при фокусі */
+}
+
+/* Стилі для кнопки пошуку */
+.search-button {
+    height: 30px; /* Висота кнопки */
+    padding: 0 20px;
+    margin-left: 10px; /* Відступ від поля введення */
+    font-size: 12px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
